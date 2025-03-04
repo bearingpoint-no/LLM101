@@ -14,7 +14,7 @@ class Llm:
         temperature=0,
     )
 
-LLM = Llm()
+#LLM = Llm()
 
 
-print(Llm.llm.invoke("whats up?"))
+#print(Llm.llm.invoke("whats up?").content)

@@ -1,0 +1,18 @@
+Metadata-Version: 2.2
+Name: llm101
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: black>=25.1.0
+Requires-Dist: kagglehub[pandas-datasets]>=0.3.8
+Requires-Dist: langchain>=0.3.19
+Requires-Dist: langchain-core>=0.3.35
+Requires-Dist: langchain-openai>=0.3.6
+Requires-Dist: langfuse>=2.59.3
+Requires-Dist: python-dotenv>=1.0.1
+Requires-Dist: ruff>=0.9.6
+Requires-Dist: utils>=1.0.2
+
+# LLM101
+Nybegynnerkurs i enkel bruk av språkmodeller.

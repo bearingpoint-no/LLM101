@@ -13,4 +13,10 @@ dependencies = [
     "langfuse>=2.59.3",
     "python-dotenv>=1.0.1",
     "ruff>=0.9.6",
+    "utils>=1.0.2",
 ]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
