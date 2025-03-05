@@ -17,4 +17,4 @@ class Llm:
 LLM = Llm()
 
 
-print(Llm.llm.invoke("whats up?"))
+print(Llm.llm.invoke("whats up?").content)
