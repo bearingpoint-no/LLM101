@@ -36,6 +36,6 @@ def loop_structured(task: str, structure_type, num_reps: int) -> None:
         print(response)
 
 
-
-
-loop_structured(task = 'Categorise this news article: ', structure_type=Categorize, num_reps=10)
+loop_structured(
+    task="Categorise this news article: ", structure_type=Categorize, num_reps=10
+)
