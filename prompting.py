@@ -1,19 +1,18 @@
 # Prompt engineering basics
 
-'''
+"""
 Poeng 1: Send mange, korte instrukser heller enn en større, komplisert instruks (iterer)
 Poeng 2: Vær tydelig og presis
 Poeng 3: Gi tilstrekkelig med kontekst
 Poeng 3: Ha god struktur, bruk oppdelere for å markere skiller osv
 Poeng 4: Gjør det umulig å misforstå. Tenk at du skal forklare oppgaven til et barn. Ikke still åpne spørsmål etc.
-'''
+"""
 
-from llm import Llm
+from utils.llm import LLM
 
 
 # Eksempel 1: En stor prompt
 def categorize(d: str) -> list:
-    
     # Prompt der LLMen blir bedt om å dele inn i fire passende kategorier basert på artikkel-beskrivelse
     task = f"""Categorize the following descriptions into four relevant categories. 
     The categories should reflect key themes or topics in the articles. 
@@ -34,8 +33,9 @@ def categorize(d: str) -> list:
     - You may select multiple categories if needed.
     - Ensure categories are logical, clear, and relevant to the feedback content."""
 
-response = Llm.llm.invoke(task).content
-return response 
+
+response = LLM.llm.invoke(task).content
+return response
 
 
 obj = categorize(d)
