@@ -12,7 +12,7 @@ class FeedbackData:
     """
 
     # Load a DataFrame with a specific version of a CSV
-    file_path = "./shuffled_df_LLM101_filtered.csv"
+    file_path = "./utils/shuffled_df_LLM101_filtered.csv"
     df = pd.read_csv(file_path)
 
 print(FeedbackData.df["Feedback"][0])
