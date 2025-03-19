@@ -1,12 +1,12 @@
 # Prompt engineering basics
 
-'''
+"""
 Poeng 1: Send mange, korte instrukser heller enn en større, komplisert instruks (iterer)
 Poeng 2: Vær tydelig og presis
 Poeng 3: Gi tilstrekkelig med kontekst
 Poeng 3: Ha god struktur, bruk oppdelere for å markere skiller osv
 Poeng 4: Gjør det umulig å misforstå. Tenk at du skal forklare oppgaven til et barn. Ikke still åpne spørsmål etc.
-'''
+"""
 
 from utils.llm import Llm
 from utils.dataset_c import News_dataset

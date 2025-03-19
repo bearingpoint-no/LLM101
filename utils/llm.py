@@ -1,20 +1,29 @@
 from langchain_openai import AzureChatOpenAI
 from dotenv import find_dotenv, load_dotenv
 import os
-#from utils.timer import timer
+
 
 # Get environment variables
 load_dotenv(find_dotenv(), override=True)
 
-class Llm:
-    # Connect to llm
+
+class LLM:
+    """
+    Class containing the language model.
+    """
+
     llm = AzureChatOpenAI(
         azure_deployment=os.environ["AZURE_OPENAI_DEPLOYMENT_GPT_4O_MINI"],
         model=os.environ.get("OPENAI_MODEL_GPT_4O-MINI", default="gpt-4o-mini"),
         temperature=0,
+        # reasoning_effort: str,
+        # Constrains effort on reasoning for reasoning models.
+        # Reasoning models only, like OpenAI o1 and o3-mini.
+        # Currently supported values are low, medium, and high.
+        # Reducing reasoning effort can result in faster responses and fewer tokens used on reasoning in a response.
     )
 
-#LLM = Llm()
 
+# LLM = Llm()
 
-#print(Llm.llm.invoke("whats up?").content)
+# print(Llm.llm.invoke("whats up?").content)

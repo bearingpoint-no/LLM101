@@ -13,6 +13,11 @@ Requires-Dist: langfuse>=2.59.3
 Requires-Dist: python-dotenv>=1.0.1
 Requires-Dist: ruff>=0.9.6
 Requires-Dist: utils>=1.0.2
+Requires-Dist: langchain-experimental>=0.3.4
+Requires-Dist: tabulate>=0.9.0
+Requires-Dist: langchain-anthropic>=0.3.9
+Requires-Dist: langchain-community>=0.3.19
+Requires-Dist: scikit-learn>=1.6.1
 
 # LLM101
 Nybegynnerkurs i enkel bruk av språkmodeller.
