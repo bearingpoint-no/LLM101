@@ -1,8 +1,7 @@
-import kagglehub
-from kagglehub import KaggleDatasetAdapter
+import pandas as pd
 
 
-class News_dataset:
+class FeedbackData:
     """
     Class containing partitions of the ag-news-classification-dataset.
 
@@ -13,14 +12,7 @@ class News_dataset:
     """
 
     # Load a DataFrame with a specific version of a CSV
-    df = kagglehub.load_dataset(
-        KaggleDatasetAdapter.PANDAS,
-        "amananandrai/ag-news-classification-dataset",
-        "test.csv",
-    )
+    file_path = "./shuffled_df_LLM101_filtered.csv"
+    df = pd.read_csv(file_path)
 
-    titles = df["Title"]
-
-    descriptions = df["Description"]
-
-    labels = df["Class Index"]
+print(FeedbackData.df["Feedback"][0])
