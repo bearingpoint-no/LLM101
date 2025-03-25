@@ -39,3 +39,8 @@ class Categorize_bound(BaseModel):
     )
 
 """
+
+class Categorize(BaseModel):
+    "Enrichment of dataset to make it more human"
+    #Thoughts: Forklar tankegangen din.
+    cat_1: str = Field(description="Return the enriched dataset in a comma separated format like the format of the input dataset")
