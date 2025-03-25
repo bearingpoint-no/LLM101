@@ -23,6 +23,18 @@ class LLM:
         # Reducing reasoning effort can result in faster responses and fewer tokens used on reasoning in a response.
     )
 
+    llm_res = AzureChatOpenAI(
+        azure_deployment=os.environ["AZURE_OPENAI_DEPLOYMENT_GPT_3O_MINI"],
+        model=os.environ.get("OPENAI_MODEL_GPT_3O-MINI", default="o3-mini"),
+        reasoning_effort="medium"
+       # temperature=0,
+        # reasoning_effort: str,
+        # Constrains effort on reasoning for reasoning models.
+        # Reasoning models only, like OpenAI o1 and o3-mini.
+        # Currently supported values are low, medium, and high.
+        # Reducing reasoning effort can result in faster responses and fewer tokens used on reasoning in a response.
+    )
+
 
 # LLM = Llm()
 

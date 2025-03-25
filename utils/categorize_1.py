@@ -12,7 +12,7 @@ class Categorize_bound(BaseModel):
 class Categorize_think(BaseModel):
     """Categorization of IT-questionaire feedback."""
 
-    cot: str = Field(description = 'Think about and explain why this category is the most fitting one/why you chose it.')
+    cot: str = Field(description = 'Think about and explain why this category is the most fitting one and why you chose it.')
     categories : Literal['Cyber secyrity','IT training','IT support','Technology quality'] = Field(description = 'Categorize the feedback into the most fitting category.')
 
 
