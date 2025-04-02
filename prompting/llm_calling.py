@@ -4,8 +4,8 @@ import pandas as pd
 
 # Calling the LLM
 
-def categorize(n):
 
+def categorize(n):
     data = FeedbackData.df
 
     data_subset = data.head(n)  # Example: Get the first n rows
@@ -21,5 +21,5 @@ def categorize(n):
     # Return the response
     return response
 
-print(categorize(10))
 
+print(categorize(10))
