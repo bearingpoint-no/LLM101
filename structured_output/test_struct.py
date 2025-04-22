@@ -39,17 +39,16 @@ def loop_structured(task: str, structure_type, num_reps: int) -> None:
 loop_structured(
     task="Categorise this news article: ", structure_type=Categorize, num_reps=10
 )
-""" 
-
+"""
 
 
 def loop_structured(task: str, structure_type, num_reps: int) -> None:
     structured_llm = LLM.llm_res.with_structured_output(structure_type)
 
     for i in range(num_reps):
-        response = structured_llm.invoke(task + f"\n'{FeedbackData.df["Feedback"][i]}'")
+        response = structured_llm.invoke(task + f"\n'{FeedbackData.df['Feedback'][i]}'")
         print(response)
 
 
-t = 'Categorize the following feedback from an IT-questionnaire:'
-loop_structured(t,Categorize_think, 10)
+t = "Categorize the following feedback from an IT-questionnaire:"
+loop_structured(t, Categorize_think, 10)
