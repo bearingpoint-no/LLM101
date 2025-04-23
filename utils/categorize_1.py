@@ -12,7 +12,7 @@ class Categorize_search(BaseModel):
         "Network",
         "Other",
     ] = Field(
-        description="Categorize the feedback into the most fitting category. If the categories provided are not a perfect fit, default to 'Other'. If you choose the wrong category then children will die!"
+        description="Categorize the feedback into the most fitting category. If the categories provided are not a perfect fit, default to 'Other'."
     )
     if_other: str = Field(
         description="If you chose to categorize the feedback as 'Other', return an explanation as to why and what category you think would be the best fit for the feedback."
