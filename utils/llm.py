@@ -31,7 +31,7 @@ class LLM_RES:
     llm_res = AzureChatOpenAI(
         azure_deployment=os.environ["AZURE_OPENAI_DEPLOYMENT_GPT_3O_MINI"],
         model=os.environ.get("OPENAI_MODEL_GPT_3O-MINI", default="o3-mini"),
-        reasoning_effort="medium",
+        reasoning_effort="high",
         # temperature=0,
         # reasoning_effort: str,
         # Constrains effort on reasoning for reasoning models.
