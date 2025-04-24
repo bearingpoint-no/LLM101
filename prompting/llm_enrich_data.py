@@ -5,7 +5,7 @@ from utils.categorize_1 import Categorize
 
 # Calling the LLM
 
-'''
+
 # Prompt
 task = f"""
 I have made a fake dataset containing feedback from employees at a company conserning their IT services.
@@ -27,7 +27,7 @@ print(response)
 with open("./output_df.csv", "w") as ofile:
     ofile.write(response.cat_1)
 
-'''
+
 
 def keep_last_column_and_save():
     data = pd.read_csv('prompting/output_df.csv')  # Load the data into a DataFrame
