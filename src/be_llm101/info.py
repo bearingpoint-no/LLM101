@@ -14,12 +14,18 @@ def get_package_info() -> Dict[str, Any]:
         Dict[str, Any]: A dictionary containing package information.
 
     Example:
-        >>> from be_llm101 import get_package_info
+        >>> from be_llm101.info import get_package_info
         >>> info = get_package_info()
         >>> print(info['version'])
-        0.1.3
+        0.1.4
     """
-    from . import __version__, __author__, __email__
+    try:
+        from . import __version__, __author__, __email__
+    except ImportError:
+        # Fallback if importing from uninstalled package
+        __version__ = "dev"
+        __author__ = "Unknown"
+        __email__ = "unknown@example.com"
 
     return {
         "name": "be-llm101",
