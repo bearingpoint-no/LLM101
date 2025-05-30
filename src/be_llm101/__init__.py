@@ -4,16 +4,20 @@ be-llm101: A Python package for LLM-related utilities and functions.
 This package provides utilities and functions for working with Large Language Models (LLMs).
 """
 
-__version__ = "0.1.0"
-__author__ = "Your Name"
-__email__ = "your.email@example.com"
+try:
+    from importlib.metadata import version, metadata
+except ImportError:
+    # Python < 3.8 fallback
+    from importlib_metadata import version, metadata
+
+__version__ = version("be-llm101")
+
+# Get author info from package metadata
+_metadata = metadata("be-llm101")
+_authors = _metadata.get("Author", "").split(",") if _metadata.get("Author") else []
+__author__ = _authors[0].strip() if _authors else "Unknown"
+__email__ = _metadata.get("Author-email", "unknown@example.com")
 
 # Import main functions to make them available at package level
-from .core import hello_llm101, get_package_info, LLMUtility
-
-# Define what gets imported with "from be_llm101 import *"
-__all__ = [
-    "hello_llm101",
-    "get_package_info",
-    "LLMUtility",
-]
+from .info import get_package_info
+from .utils import get_data_path, load_data
