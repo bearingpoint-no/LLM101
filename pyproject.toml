@@ -1,6 +1,6 @@
 [project]
 name = "be-llm101"
-version = "0.1.4"
+version = "0.1.5"
 description = "A Python package for a BearingPoint internal LLM course"
 readme = "README.md"
 requires-python = ">=3.11.12"
