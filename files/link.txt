@@ -1,0 +1,1 @@
+https://colab.research.google.com/github/bearingpoint-no/LLM101/blob/main/course/MDS_spraakmodeller_for_alle.ipynb
